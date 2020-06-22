@@ -1,5 +1,5 @@
 import unittest
-from Calculator import Calculator
+from Calculator import Calculator, addition
 
 
 class MyTestCase(unittest.TestCase):
@@ -11,6 +11,10 @@ class MyTestCase(unittest.TestCase):
     def test_results_property_calculator(self):
         calculator = Calculator()
         self.assertEqual(calculator.result, 4)
+
+    def test_add_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.add(2, 2), 4)
 
 if __name__ == '__main__':
     unittest.main()
