@@ -1,6 +1,9 @@
 # py_calc
 IS 601850 - Homework: Create a Calculator - Individual
 
+## Ran 8 Tests
+![Ran 8 Tests](/codeshots/ran_tests.png)
+
 ## Results: Addition
 ![Results: Addition](/codeshots/result_addition.png)
 
@@ -18,6 +21,3 @@ IS 601850 - Homework: Create a Calculator - Individual
 
 ## Results: Squarerooting
 ![Results: Squarerooting](/codeshots/result_squarerooting.png)
-
-## Ran 8 Tests
-![Ran 8 Tests](/codeshots/ran_tests.png)
