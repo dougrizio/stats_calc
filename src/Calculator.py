@@ -33,5 +33,5 @@ class Calculator:
         return self.result
 
     def square(self, a):
-        self.result = Calculator.squarify(a)
+        self.result = Calculator.squaring(a)
         return self.result
