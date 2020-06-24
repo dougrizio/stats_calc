@@ -28,7 +28,7 @@ class Calculator:
 
     @staticmethod
     def squarerooting(a):
-        return math.sqrt(float(a))
+        return round(math.sqrt(float(a)), 9)
 
     def subtract(self, a, b):
         self.result = Calculator.subtraction(a, b)
