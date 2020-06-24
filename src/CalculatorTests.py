@@ -14,10 +14,17 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 0)
 
     def test_subtraction(self):
-        test_data = CsvReader('/src/ut_subtraction.csv').data
-        pprint(test_data)
-        for row in test_data:
+        test_subtraction_data = CsvReader('/src/ut_subtraction.csv').data
+        pprint(test_subtraction_data)
+        for row in test_subtraction_data:
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+
+    def test_addition(self):
+        test_addition_data = CsvReader('/src/ut_addition.csv').data
+        pprint(test_addition_data)
+        for row in test_addition_data:
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
 def ClassFactory(class_name, dictionary):
