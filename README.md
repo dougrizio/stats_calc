@@ -2,7 +2,7 @@
 IS 601850 - Homework: Create a Calculator - Individual
 
 ## Results: Addition
-![Results: Addition](/codeshots/result_addition1.png)
+![Results: Addition](codeshots/result_addition1.png)
 
 ## Results: Subtraction
 ![Results: Subtraction](/codeshots/result_subtraction.png)
