@@ -1,6 +1,6 @@
+import csv
 import unittest
 from Calculator import Calculator
-from CsvReader import CsvReader
 from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
@@ -19,6 +19,25 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
+
+def ClassFactory(class_name, dictionary):
+    return type(class_name, (object,), dictionary)
+
+class CsvReader:
+    data = []
+
+    def __init__(self, filepath):
+        with open(filepath) as text_data:
+            csv_data = csv.DictReader(text_data, delimiter=',')
+            for row in csv_data:
+                self.data.append(row)
+        pass
+
+    def return_data_as_objects(self, class_name):
+        objects = []
+        for row in self.data:
+            objects.append(ClassFactory(class_name, row))
+        return objects
 
 if __name__ == '__main__':
     unittest.main()
