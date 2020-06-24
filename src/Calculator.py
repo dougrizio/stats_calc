@@ -1,3 +1,5 @@
+import math
+
 class Calculator:
     result = 0
 
@@ -24,6 +26,10 @@ class Calculator:
     def division(a, b):
         return round((float(b) / float(a)), 9)
 
+    @staticmethod
+    def squarerooting(a):
+        return math.sqrt(float(a))
+
     def subtract(self, a, b):
         self.result = Calculator.subtraction(a, b)
         return self.result
@@ -42,4 +48,8 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = Calculator.division(a, b)
+        return self.result
+
+    def squareroot(self, a, b):
+        self.result = Calculator.squarerooting(a)
         return self.result
