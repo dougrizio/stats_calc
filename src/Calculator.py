@@ -19,3 +19,7 @@ class Calculator:
     @staticmethod
     def addition(a, b):
         return int(a) + int(b)
+
+    @staticmethod
+    def multiplication(a, b):
+        return int(a) * int(b)

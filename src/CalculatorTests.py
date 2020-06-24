@@ -27,6 +27,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_multiplication(self):
+        test_multiplication_data = MyTestCase.CsvReader('/src/ut_multiplication.csv')
+        pprint(test_multiplication_data)
+        for row in test_multiplication_data:
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+
     @staticmethod
     def CsvReader(filepath):
         objects = []
