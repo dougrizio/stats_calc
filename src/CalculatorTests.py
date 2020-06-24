@@ -52,7 +52,7 @@ class MyTestCase(unittest.TestCase):
         test_squarerooting_data = MyTestCase.CsvReader('/src/ut_squarerooting.csv')
         pprint(test_squarerooting_data)
         for row in test_squarerooting_data:
-            self.assertEqual(self.calculator.squareroot(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertEqual(self.calculator.squareroot(row['Value 1']), float(row['Result']))
             self.assertEqual(self.calculator.result, float(row['Result']))
 
     @staticmethod

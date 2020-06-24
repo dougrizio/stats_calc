@@ -50,6 +50,6 @@ class Calculator:
         self.result = Calculator.division(a, b)
         return self.result
 
-    def squareroot(self, a, b):
+    def squareroot(self, a):
         self.result = Calculator.squarerooting(a)
         return self.result
