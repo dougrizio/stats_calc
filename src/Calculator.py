@@ -12,6 +12,10 @@ class Calculator:
         self.result = Calculator.addition(a, b)
         return self.result
 
+    def multiply(self, a, b):
+        self.result = Calculator.multiplication(a, b)
+        return self.result
+
     @staticmethod
     def subtraction(a, b):
         return int(b) - int(a)
