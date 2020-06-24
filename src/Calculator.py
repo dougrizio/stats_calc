@@ -1,9 +1,3 @@
-def subtraction(a, b):
-    return int(b) - int(a)
-
-def addition(a, b):
-    return int(a) + int(b)
-
 class Calculator:
     result = 0
 
@@ -11,9 +5,17 @@ class Calculator:
         pass
 
     def subtract(self, a, b):
-        self.result = subtraction(a, b)
+        self.result = Calculator.subtraction(a, b)
         return self.result
 
     def add(self, a, b):
-        self.result = subtraction(a, b)
+        self.result = Calculator.addition(a, b)
         return self.result
+
+    @staticmethod
+    def subtraction(a, b):
+        return int(b) - int(a)
+
+    @staticmethod
+    def addition(a, b):
+        return int(a) + int(b)
