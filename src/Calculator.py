@@ -16,6 +16,10 @@ class Calculator:
     def multiplication(a, b):
         return int(a) * int(b)
 
+    @staticmethod
+    def squaring(a):
+        return int(a) * int(a)
+
     def subtract(self, a, b):
         self.result = Calculator.subtraction(a, b)
         return self.result
@@ -26,4 +30,8 @@ class Calculator:
 
     def multiply(self, a, b):
         self.result = Calculator.multiplication(a, b)
+        return self.result
+
+    def square(self, a):
+        self.result = Calculator.squarify(a)
         return self.result

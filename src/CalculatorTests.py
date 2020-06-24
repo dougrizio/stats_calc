@@ -34,6 +34,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_squaring(self):
+        test_squaring_data = MyTestCase.CsvReader('/src/ut_squaring.csv')
+        pprint(test_squaring_data)
+        for row in test_squaring_data:
+            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+
     @staticmethod
     def CsvReader(filepath):
         objects = []
