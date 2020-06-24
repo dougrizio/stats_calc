@@ -29,16 +29,11 @@ class MyTestCase(unittest.TestCase):
 
     @staticmethod
     def CsvReader(filepath):
-        data = []
+        objects = []
         with open(filepath) as text_data:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
-                data.append(row)
-
-    def return_data_as_objects(self):
-        objects = []
-        for row in self:
-            objects.append(MyTestCase.CsvReader)
+                objects.append(row)
         return objects
 
 if __name__ == '__main__':
