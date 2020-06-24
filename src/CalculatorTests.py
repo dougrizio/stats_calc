@@ -45,8 +45,8 @@ class MyTestCase(unittest.TestCase):
         test_division_data = MyTestCase.CsvReader('/src/ut_division.csv')
         pprint(test_division_data)
         for row in test_division_data:
-            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
+            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
 
     @staticmethod
     def CsvReader(filepath):

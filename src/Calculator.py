@@ -22,7 +22,7 @@ class Calculator:
 
     @staticmethod
     def division(a, b):
-        return float(b) / float(a)
+        return round((float(b) / float(a)), 9)
 
     def subtract(self, a, b):
         self.result = Calculator.subtraction(a, b)
