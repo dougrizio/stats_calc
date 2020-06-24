@@ -24,11 +24,11 @@ class Calculator:
 
     @staticmethod
     def division(a, b):
-        return round((float(b) / float(a)), 9)
+        return float(b) / float(a)
 
     @staticmethod
     def squarerooting(a):
-        return round(math.sqrt(float(a)), 9)
+        return math.sqrt(float(a))
 
     def subtract(self, a, b):
         self.result = Calculator.subtraction(a, b)

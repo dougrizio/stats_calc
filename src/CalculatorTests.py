@@ -45,15 +45,15 @@ class MyTestCase(unittest.TestCase):
         test_division_data = MyTestCase.CsvReader('/src/ut_division.csv')
         pprint(test_division_data)
         for row in test_division_data:
-            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
-            self.assertEqual(self.calculator.result, float(row['Result']))
+            self.assertAlmostEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
     def test_squarerooting(self):
         test_squarerooting_data = MyTestCase.CsvReader('/src/ut_squarerooting.csv')
         pprint(test_squarerooting_data)
         for row in test_squarerooting_data:
-            self.assertEqual(self.calculator.squareroot(row['Value 1']), float(row['Result']))
-            self.assertEqual(self.calculator.result, float(row['Result']))
+            self.assertAlmostEqual(self.calculator.squareroot((row['Value 1'])), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
     @staticmethod
     def CsvReader(filepath):
