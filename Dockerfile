@@ -1,5 +1,5 @@
 FROM python:3
 
-ADD tests /tests
+ADD Tests /Tests
 
-CMD [ "python", "./tests/CalculatorTests.py" ]
+CMD [ "python", "./Tests/CalculatorTests.py" ]
