@@ -1,4 +1,9 @@
-from Addition import addition2
+from Addition import addition
+from Division import division
 
-def mean(numbers):
-    return float(Calculator.addition())
+def mean(data):
+    numValues = len(data)
+    total = 0
+    for num in data:
+        total = addition(total, num)
+    return division(total, numValues)
